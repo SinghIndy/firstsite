@@ -1,0 +1,197 @@
+html{}
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(repeat.png);
+    max-width: 100%;
+    max-height: fit-content;
+}
+
+.outer-wrapper{
+    margin: 0 5% 0 5%;
+    /* max-width: 1200px;
+    margin: 0 auto; */
+    background-color: gainsboro;
+}
+.header{
+    /* margin: 10px; */
+    color: orange;
+    background-color: #252321;
+    text-align: center;
+    border-bottom: 2px solid orange;
+}
+a{
+    text-decoration: none;
+    color: orange;
+}
+a:hover{
+    color: orange;
+    opacity: 0.5;
+    border: 1px solid orange;
+}
+.nav-list{
+    display: flex;
+    padding: 0px 0 0 0;
+    border-bottom: 1px solid orange;
+    position: relative;
+}
+.nav {
+    flex: 1 0 33%;
+    list-style-type: none;
+    display: inline-block;
+    font-size: 20px;
+}
+.navigation{}
+.title{
+    padding: 10px;
+    text-shadow: 1px 1px 1px orange;
+}
+.p-num{
+    color: azure;
+    text-decoration: underline;
+}
+
+.intro,
+.child-info,
+.area-coverage{
+    margin: 0px;
+    padding: 30px;
+    background-color:whitesmoke;
+    color: black;
+    font-size: 20px;
+}
+
+.child-info,
+.area-coverage{}
+
+img{
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    box-shadow: 2px solid;
+}
+
+.taxi-front,
+.taxi-back{
+    width: 100%;
+    display: block;
+}
+
+/* ADDITIONS                                        */
+
+.contact-us-form{
+    text-decoration: underline;
+}
+
+.contactus{
+    /* margin: 20px 20px 0px 20px;
+    padding: 10px; */
+    background-color:whitesmoke;
+    color: black;
+    font-size: 20px;
+    display: flex;
+}
+
+.form input{
+    padding: 5px;
+    width: 100%;
+}
+
+.form textarea{
+    padding: 10px;
+    width: 100%;
+    margin-right: 10px;
+}
+
+/* .twoSections{
+    flex: 1 1 50%;
+} */
+.form,
+.imgss{
+    flex: 1 1 50%;
+    padding: 0 20px;
+}
+
+
+
+.submit{
+    background-color: 	#FFE4B5;
+    text-align: center;
+    width: 50%;
+    max-width: 350px;
+    height: 30px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.submit:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.footer{
+    margin:50px;
+    padding: 50px 50px 10px 50px;
+    border-top: 2px solid orange;
+    background-color: #252321;
+    margin: 0 5% 0 5%;
+    color: orange;
+    text-align: center;
+}
+
+.footer div {
+    display: inline-block;
+}
+
+.bttt{
+    color: white;
+    text-decoration: underline;
+    
+}
+
+@media (max-width: 414px){
+    .taxi-front,
+    .taxi-back{
+        width: 100%;
+        display: inline-block;
+    }
+    .form textarea{
+        width: 98%;
+    }
+}
+
+@media (min-width: 800px){
+    /* Had to add a static size cuz img was getting too big on bigger screens */
+    img{
+        width: 400px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 1800px){
+    .taxi-front,
+    .taxi-back{
+    width: 49%;
+    display: inline-block;
+}
+.form input{
+    width: 80%;
+    }
+.form textarea{
+    width: 80%;
+    }
+}
+
+@media (max-width: 600px){
+    .contactus{
+        display: block
+    }
+    .form textarea{
+        width: 98%;
+    }
+}
+
+/* STYLE THE FORM ALMOST THERE BOIIIIIIIIIIIIIIIIII */
+
+/* Add a dark mode button with js to create transitions from light to dark */

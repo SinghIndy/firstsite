@@ -5,44 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airport Taxi Services</title>
     <link rel="icon" type="image/png" href="favicon-32x32.png">
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link id="theme" rel="stylesheet" href="style3-light.css" type="text/css">
 </head>
 <body>
     <div class="outer-wrapper">
-        <header class="header">
+        <header class="header color-aqua color-border">
             <nav class="navigation">
-                <ul class="nav-list">
+                <ul class="nav-list color-aqua color-border">
                     <li class="nav"><a href="index.html">HOME</a> </li>
                     <li class="nav"><a href="#services">SERVICE AREA</a> </li>
                     <li class="nav"><a href="#contactus">CONTACT US</a> </li>
                 </ul>
             </nav>    
-                <div class="title">
-                    <h1 class="" id="home">AIRPORT TAXI SERVICE &nbsp;&nbsp;&nbsp;&nbsp; <div class="p-num">000-000-000</div></h1>
+                <div class="title color-aqua color-shadow">
+                    <h1 class="" id="home">AIRPORT TAXI SERVICE &nbsp;&nbsp;&nbsp;&nbsp; <div class="p-num1">000-000-000</div></h1>
+                    <button class="darkmode js-click" id="theme-toggle">Dark Mode</button>
                 </div>
             
         </header>
-        <section class="intro">
+        <section class="intro text-white color-bg">
            <p> Airport Taxi provides transporatiation services to and from San Francisco, San Jose and OAK Airport. <br> <br>
             Drivers provide punctual and on time taxi serivces. <br>
             If you would to request transportation from a local airport,
-            Please contact us at <span class="p-num" style="color: black;">000-000-000</span>. <br> <br>
+            Please contact us at <span class="p-num">000-000-000</span>. <br> <br>
             Mode of transportation to/from the airport shall be Mini Van. 
                 Child seats are available on request.
             </p>
         </section>
-        <section class="area-coverage" id="services">
+        <section class="area-coverage text-white color-bg" id="services">
             ATS provides services around SFO, SJC, and OAK areas.
-            If you have any questions about service, Call <span class="p-num" style="color: black;">000-000-000</span>.
+            If you have any questions about service, Call <span class="p-num">000-000-000</span>.
         </section>
-        <section class="child-info">
+        <section class="child-info text-white color-bg">
             <div>Child seats are available on request. Please provide information of how many
                 children will be accompanying you as well as childrens' age and weight to assure 
                 proper seats are provided.
             </div>
         </section>
             <!-- Flex Container form/imgss-->
-        <section class="contactus" id="contactus">
+        <section class="contactus text-white color-bg" id="contactus">
             <form action="" class="form">
                 <h1 class="contact-us-form">Contact Us</h1>
                 <div class="contact-us">Feel free to contact us with questions or comments <br> <br></div>
@@ -61,7 +62,7 @@
                     
                     <p class="required">* required fields</p>
                     
-                    <input type="submit" name="submit" class="submit" value="Submit">
+                    <input type="submit" name="submit" class="submit color-bg-submit" value="Submit">
                 </div>
             </form>
 
@@ -71,11 +72,31 @@
             </div>
         </section>
 
-        <footer class="footer">
+        <footer class="footer color-aqua color-border">
             <div class="email">Testing@gmail.com</div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-            <div><a class="bttt" href="index.html">Back to the top</a></div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div><a class="bttt" id="bttt" href="index.html">Back to the top</a></div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <div>&copy;AIRPORT TAXI SERVICE 2020 </div>
         </footer>
     </div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeStylesheet = document.getElementById('theme');
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('click', () => {
+                //if it's light -> go dark
+                if(themeStylesheet.href.includes('light')){
+                    themeStylesheet.href = 'style2-dark.css';
+                    themeToggle.innerText = 'Light mode';
+                } else {
+                    // if it's dark -> go light
+                    themeStylesheet.href = "style3-light.css";
+                    themeToggle.innerText = "Dark mode";
+                }
+            })
+        })
+
+    </script>
 </body>
 </html>
